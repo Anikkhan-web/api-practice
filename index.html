@@ -5,18 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+   
 </head>
 <body>
    
 
     <h2>Hello API</h2>
-    <ul id="users">
 
-    </ul>
-    <button onclick="loadData()">Load Data</button>
-    <button onclick="loadUser()">Load User</button>
-    <button onclick="loadPost()">Load Posts</button>
+    <div class="container">
+        <div class="row d-flex justify-content-center" id="users"></div>
+      </div>
+    
+    
+   
     <button onclick="toDosApp()">Load ToDo</button>
 
     <script src="api.js"></script>

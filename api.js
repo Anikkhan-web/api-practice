@@ -43,20 +43,54 @@
 //        .then(data =>loadToDosApp(data))
        
 //     }
-//     function loadToDosApp(to){
-//        const ul = document.getElementById('users')
-//        for(const title of to){
-//          console.log(title)
-//          const div = document.createElement('div')
-//          div.classList.add('custom')
-//          div.innerHTML = `
-//          <h3>${title.title}</h3>
-//           <p>${title.id}</p> `
-//          ul.appendChild(div);
+  //   function loadToDosApp(to){
+  //      const ul = document.getElementById('users')
+  //      for(const title of to){
+  //        console.log(title)
+  //        const div = document.createElement('div')
+  //        div.classList.add('custom')
+  //        div.innerHTML = `
+  //        <h3>${title.title}</h3>
+  //         <p>${title.id}</p> `
+  //        ul.appendChild(div);
 
-//        }
+  //      }
       
-//    }
-const stuInfo = JSON.stringify({ name: "James", roll: 3 }); 
+  //  }
 
-console.log(stuInfo.name);
+
+   function toDosApp(){
+    fetch('https://jsonplaceholder.typicode.com/photos')
+    .then(response => response.json())
+    .then(data =>loadToDosApp(data) )
+
+       }
+
+  function loadToDosApp(photos){
+       const con = document.getElementById('users')
+       for(const photo of photos){
+         const div = document.createElement('div') 
+         div.innerHTML = `    
+      <div class="col" ><img  src="${photo.thumbnailUrl}" ></div>
+         `
+         con.appendChild(div);
+       }     
+   }
+
+   
+// fetch('https://jsonplaceholder.typicode.com/posts', {
+//   method: 'POST',
+//   body: JSON.stringify({
+//     title: 'foo',
+//     body: 'bar',
+//     userId: 1,
+//   }),
+//   headers: {
+//     'Content-type': 'application/json; charset=UTF-8',
+//   },
+// })
+//   .then((response) => response.json())
+//   .then((json) => console.log(json));
+
+
+//   function 
